@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Union Testnet 8 Model</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #cdd5df;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #111;
+      font-weight: 600;
+    }
+    header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #d6dce4;
+      padding: 10px 20px;
+      border-bottom: 2px solid #808080;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .logo img {
+      height: 20px;
+    }
+    .logo strong {
+      font-weight: 900;
+      color: #000;
+    }
+    .search {
+      display: flex;
+      align-items: center;
+      margin-top: 10px;
+    }
+    .search input {
+      padding: 5px;
+      font-family: inherit;
+      font-size: 14px;
+      font-weight: 600;
+      color: #000;
+    }
+    .search button {
+      background-color: #202020;
+      color: white;
+      border: none;
+      padding: 6px 10px;
+      cursor: pointer;
+      font-weight: 700;
+    }
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      margin-top: 10px;
+    }
+    nav span {
+      margin-left: 20px;
+      position: relative;
+      cursor: pointer;
+      color: #111;
+      font-weight: 700;
+    }
+    nav span:hover::after {
+      content: attr(data-tooltip);
+      position: absolute;
+      bottom: -55px;
+      left: 0;
+      background: #202020;
+      color: #fff;
+      padding: 8px;
+      font-size: 12px;
+      width: 250px;
+      z-index: 1;
+      border-radius: 4px;
+    }
+    .connected {
+      background-color: #b3efff;
+      padding: 8px 12px;
+      font-weight: 700;
+      margin-top: 10px;
+    }
+    .container {
+      display: flex;
+      justify-content: center;
+      padding: 60px 10px;
+    }
+    .transfer-box {
+      background: #e3e3e3;
+      width: 100%;
+      max-width: 320px;
+      padding: 20px;
+      border: 2px solid #808080;
+    }
+    .transfer-box h2 {
+      font-size: 16px;
+      border-bottom: 1px solid #808080;
+      padding-bottom: 5px;
+      margin-bottom: 15px;
+      font-weight: 700;
+    }
+    select, input[type="text"] {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      font-family: inherit;
+      font-weight: 600;
+      color: #111;
+    }
+    .asset-label {
+      text-align: center;
+      font-weight: 700;
+      background-color: #cfcfcf;
+      padding: 8px;
+      margin-bottom: 10px;
+      color: #111;
+    }
+    .balance {
+      font-size: 12px;
+      margin-bottom: 5px;
+      font-weight: 600;
+      color: #111;
+    }
+    .note {
+      font-size: 11px;
+      margin: 10px 0;
+      font-weight: 600;
+      color: #111;
+    }
+    button.transfer-btn {
+      width: 100%;
+      padding: 10px;
+      background-color: #202020;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-weight: 700;
+    }
+    footer {
+      text-align: center;
+      margin-top: 10px;
+      font-size: 12px;
+      font-weight: 600;
+      color: #111;
+    }
+    @media screen and (max-width: 500px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
+      nav {
+        flex-direction: column;
+        gap: 5px;
+      }
+      .search {
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .search input,
+      .search button {
+        width: 100%;
+        margin-top: 5px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="union_logo_placeholder.png" alt="Union Logo" />
+      <strong>UNION</strong>
+      <span style="background: black; color: white; font-size: 10px; padding: 2px 4px;">TESTNET 9 BETA</span>
+    </div>
+    <div class="search">
+      <input type="text" placeholder="search for address or tx hash..." />
+      <button onclick="location.href='https://x.com/shinosuka_eth'">⏎K</button>
+    </div>
+    <nav>
+      <span data-tooltip="Union Testnet 8 was the initial stage of Union's official Testnet. Transfers at that time took upto 30minutes to go through making the tasks of Testers alot harder.">TRANSFER</span>
+      <span data-tooltip="During Testnet 8, it was very hard to gather enough faucets to complete your tasks.">FAUCET</span>
+      <span data-tooltip="Union's initial explorer displayed the amount, sender and receiver unlike today's complex mechanisms like the ORBITAL.">EXPLORER</span>
+    </nav>
+    <div class="connected">CONNECTED</div>
+  </header>
+
+  <div class="container">
+    <div class="transfer-box">
+      <h2>TRANSFER</h2>
+
+      <select>
+        <option selected>Union Testnet</option>
+        <option>Base Testnet</option>
+        <option>Arbitrum Testnet</option>
+        <option>Berachain Testnet</option>
+        <option>Monad Testnet</option>
+        <option>Bob Testnet</option>
+        <option>Neuron Testnet</option>
+        <option>Union Testnet</option>
+        <option>Xion Testnet</option>
+        <option>Babylon Testnet</option>
+        <option>Osmosis Testnet</option>
+        <option>Bsc Testnet</option>
+        <option>Corn Testnet</option>
+        <option>Aptos Testnet</option>
+        <option>Sepolia Testnet</option>
+        <option>Holesky Testnet</option>
+        <option>stride testnet</option>
+      </select>
+
+      <select>
+        <option selected>stride testnet</option>
+        <option>Base Testnet</option>
+        <option>Arbitrum Testnet</option>
+        <option>Berachain Testnet</option>
+        <option>Monad Testnet</option>
+        <option>Bob Testnet</option>
+        <option>Neuron Testnet</option>
+        <option>Union Testnet</option>
+        <option>Xion Testnet</option>
+        <option>Babylon Testnet</option>
+        <option>Osmosis Testnet</option>
+        <option>Bsc Testnet</option>
+        <option>Corn Testnet</option>
+        <option>Aptos Testnet</option>
+        <option>Sepolia Testnet</option>
+        <option>Holesky Testnet</option>
+        <option>stride testnet</option>
+      </select>
+
+      <div class="asset-label">$U</div>
+      <div class="balance">Balance: 0.106908 <span style="float:right">MAX</span></div>
+
+      <input type="text" placeholder="0.02" />
+      <input type="text" placeholder="stride1letan4urwnsfplex94cj610jv4sn9a2ka0fzlx7e" />
+
+      <div class="note">Union Testnet 8 Model by Shinosuka</div>
+
+      <button class="transfer-btn" onclick="location.href='https://x.com/shinosuka_eth'">TRANSFER</button>
+    </div>
+  </div>
+</body>
+</html>
